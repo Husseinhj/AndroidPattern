@@ -23,4 +23,4 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: echo "ext.usr=Husseinhj\next.key=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" < github.properties github.properties && ./gradlew publish --release
+      run: echo "ext.usr=Husseinhj\next.key=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" > github.properties github.properties && ./gradlew publish --release
