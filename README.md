@@ -34,7 +34,7 @@ print(applied)
 Separator format:
 ```kotlin
 val pattern = "###,###,###,###"
-val applied = "123456789".applyPattern(pattern, exactPattern = true)
+val applied = 123456789.applyPattern(pattern, exactPattern = true)
 
 print(applied)
 
