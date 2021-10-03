@@ -13,7 +13,7 @@ afterEvaluate {
                 from components.release
 
                 // Replace with your own group ID.
-                groupId 'io.husseinhj.androidpatterns'
+                groupId 'io.husseinhj'
 
                 // Replace with the name of your library
                 artifactId artifactsId
@@ -24,10 +24,10 @@ afterEvaluate {
                 from components.debug
 
                 // Replace with your own group ID.
-                groupId 'io.husseinhj.androidpatterns'
+                groupId 'io.husseinhj'
 
                 // Replace with the name of your library
-                artifactId artifactsId
+                artifactId "${artifactsId}-debug"
                 version '1.0.0'
             }
         }
