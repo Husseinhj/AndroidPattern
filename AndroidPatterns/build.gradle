@@ -5,6 +5,8 @@ plugins {
 }
 
 afterEvaluate {
+    def artifactsId = 'AndroidPatterns'
+
     publishing {
         publications {
             release(MavenPublication) {
@@ -14,7 +16,7 @@ afterEvaluate {
                 groupId 'io.husseinhj.androidpatterns'
 
                 // Replace with the name of your library
-                artifactId 'AndroidPatterns'
+                artifactId artifactsId
                 version '1.0.0'
             }
 
@@ -25,7 +27,7 @@ afterEvaluate {
                 groupId 'io.husseinhj.androidpatterns'
 
                 // Replace with the name of your library
-                artifactId 'AndroidPatterns'
+                artifactId artifactsId
                 version '1.0.0'
             }
         }
@@ -40,11 +42,11 @@ afterEvaluate {
 
                 // Replace GITHUB_USERID with your personal or organisation user ID and
                 // REPOSITORY with the name of the repository on GitHub
-                url = uri("https://maven.pkg.github.com/GITHUB_USERID/REPOSITORY")
+                url = uri("https://maven.pkg.github.com/${props['ext.usr']}/${artifactsId}")
 
                 credentials {
-                    username = props['ext.usr']
-                    password = props['ext.key']
+                    username = System.getenv("GITHUB_ACTOR")
+                    password = System.getenv("GITHUB_TOKEN")
                 }
             }
         }
