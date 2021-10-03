@@ -24,12 +24,12 @@ class AndroidPattern {
 
                 if (digitPatterns.contains(patternStringArray[patternCounter])) {
                     appliedFormat.add(stringDigitArray[digitCounter])
-                    patternCounter++
                     digitCounter++
                 } else {
                     appliedFormat.add(patternStringArray[patternCounter])
-                    patternCounter++
                 }
+
+                patternCounter++
             }
 
             if (digitCounter < patternCounter && !exactPattern) {
