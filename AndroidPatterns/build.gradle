@@ -1,8 +1,55 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                // Replace with your own group ID.
+                groupId 'io.husseinhj.androidpatterns'
+
+                // Replace with the name of your library
+                artifactId 'AndroidPatterns'
+                version '1.0.0'
+            }
+
+            debug(MavenPublication) {
+                from components.debug
+
+                // Replace with your own group ID.
+                groupId 'io.husseinhj.androidpatterns'
+
+                // Replace with the name of your library
+                artifactId 'AndroidPatterns'
+                version '1.0.0'
+            }
+        }
+
+        repositories {
+            maven {
+                def propsFile = rootProject.file('github.properties')
+                def props = new Properties()
+                props.load(new FileInputStream(propsFile))
+
+                name = "GitHubPackages"
+
+                // Replace GITHUB_USERID with your personal or organisation user ID and
+                // REPOSITORY with the name of the repository on GitHub
+                url = uri("https://maven.pkg.github.com/GITHUB_USERID/REPOSITORY")
+
+                credentials {
+                    username = props['ext.usr']
+                    password = props['ext.key']
+                }
+            }
+        }
+    }
+}
 android {
     compileSdk 31
 
