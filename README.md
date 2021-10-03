@@ -1,5 +1,13 @@
 # AndroidPattern
-Format numbers using a string pattern with this simple number formatted like ##-####-##
+Format numbers using a string pattern with this simple number formatted like `##-####-##`
+
+# Installation
+Following the [Github package manager documentation](https://github.com/Husseinhj/AndroidPattern/packages/1022537) or following code:
+
+```groovy
+implementation "io.husseinhj:androidpatterns:1.0.0"
+```
+
 
 ## Digit format
 By default, numbers are defined by the `#` character and if you want to customize the format, use the `digitPatterns` property as shown in the following code:
