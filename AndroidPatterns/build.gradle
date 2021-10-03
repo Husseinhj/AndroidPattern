@@ -5,7 +5,7 @@ plugins {
 }
 
 afterEvaluate {
-    def artifactsId = 'AndroidPatterns'
+    def artifactsId = 'androidpatterns'
 
     publishing {
         publications {
