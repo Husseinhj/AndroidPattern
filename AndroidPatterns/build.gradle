@@ -5,6 +5,8 @@ plugins {
 }
 
 afterEvaluate {
+    def sdkVersion = '1.0.1'
+    def sdkGroupId = 'io.husseinhj'
     def artifactsId = 'androidpatterns'
 
     publishing {
@@ -13,22 +15,22 @@ afterEvaluate {
                 from components.release
 
                 // Replace with your own group ID.
-                groupId 'io.husseinhj'
+                groupId sdkGroupId
 
                 // Replace with the name of your library
                 artifactId artifactsId
-                version '1.0.0'
+                version sdkVersion
             }
 
             debug(MavenPublication) {
                 from components.debug
 
                 // Replace with your own group ID.
-                groupId 'io.husseinhj'
+                groupId sdkGroupId
 
                 // Replace with the name of your library
                 artifactId "${artifactsId}-debug"
-                version '1.0.0'
+                version sdkVersion
             }
         }
 
