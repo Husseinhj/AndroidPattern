@@ -5,10 +5,19 @@
 Format numbers using a string pattern with this simple number formatted like `##-####-##`
 
 # Installation
-Following the [Github package manager documentation](https://github.com/Husseinhj/AndroidPattern/packages/1022537) or following code:
+Add it in your root `build.gradle` at the end of repositories:
 
 ```groovy
-implementation "io.husseinhj:androidpatterns:1.0.0"
+buildscript {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+```groovy
+implementation "com.github.Husseinhj:AndroidPattern:1.0.1"
 ```
 
 
