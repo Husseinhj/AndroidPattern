@@ -1,4 +1,5 @@
 # AndroidPattern
+[![jitpack](https://jitpack.io/v/Husseinhj/AndroidPattern.svg)](https://jitpack.io/#Husseinhj/AndroidPattern)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FHusseinhj%2FAndroidPattern.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FHusseinhj%2FAndroidPattern?ref=badge_shield)
 
 Format numbers using a string pattern with this simple number formatted like `##-####-##`
