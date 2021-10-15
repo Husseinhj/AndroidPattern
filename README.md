@@ -5,6 +5,9 @@
 Format numbers using a string pattern with this simple number formatted like `##-####-##`
 
 # Installation
+To get a Git project into your build:
+**Step 1.** Add the JitPack repository to your build file
+
 Add it in your root `build.gradle` at the end of repositories:
 
 ```groovy
@@ -15,6 +18,8 @@ buildscript {
     }
 }
 ```
+
+**Step 2.** Add the dependency
 
 ```groovy
 implementation "com.github.Husseinhj:AndroidPattern:1.0.1"
